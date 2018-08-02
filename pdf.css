@@ -1,5 +1,5 @@
 *{
-  font-size: 16px;
+  font-size: 32px;
 }
 
 /* width */
@@ -36,20 +36,20 @@
 /* td height */
 
 td{
-  height: 30px;
-  padding-left: 5px;
+  height: 60px;
+  padding-left: 10px;
   font-size: 1em;
 }
 
 .td-2{
-  height: 60px;
-  padding-left: 5px;
+  height: 120px;
+  padding-left: 10px;
   font-size: 1.5em;
 }
 
 .td-3{
-  height: 90px;
-  padding: 5px 10px auto auto;
+  height: 180px;
+  padding: 10px 20px auto auto;
   font-size: 1.4em;
 }
 
@@ -69,14 +69,14 @@ td{
   font-size: 1em;
   vertical-align: middle;
   display: inline-block;
-  padding: auto 5px;  
+  padding: auto 10px;  
 }
 
 .content-lg{
   font-size: 1.1em;
   vertical-align: middle;
   display: inline-block;
-  padding: 5px 5px;
+  padding: 10px;
 }
 
 /* border all */
@@ -181,16 +181,7 @@ td{
 /* others */
 
 #part-left, #part-right{
-  display: inline-block;
-  width: 50%;
-}
-
-#part-left{
-  float: left;
-}
-
-#part-right{
-  float: right;
+  page-break-before: always;
 }
 
 #title, #date{
@@ -203,12 +194,12 @@ td{
 
 #date{
   font-size: 2em;
-  padding: 0 0 0 100px;
+  padding: 0 0 0 200px;
 }
 
 #profile-image{
-  width: 180px;
-  height: 240px;
+  width: 360px;
+  height: 480px;
   border: 1px dotted #000;
   float: right;
   margin: 0 10% 0 0;
@@ -216,14 +207,14 @@ td{
 
 #profile-top{
   width: 60%;
-  margin: 130px 0 0;
+  margin: 260px 0 0;
 }
 
 #profile-middle, #profile-bottom, #career-left,
 #career-right, #licences, #application, #others{
-  width: 90%;
+  width: 100%;
 }
 
 #career-left, #licences, #application, #others{
-  margin: 30px 0 0;
+  margin: 60px 0 0;
 }
