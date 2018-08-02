@@ -90,6 +90,11 @@ td{
   border-collapse: collapse;
 }
 
+.bb-semibold{
+  border-bottom: 2px solid #000;
+  border-collapse: collapse;
+}
+
 .bb-bold{
   border-bottom: 3px solid #000;
   border-collapse: collapse;
@@ -140,6 +145,10 @@ td{
   width: 30%;
 }
 
-#profile-middle, #profile-bottom{
+#profile-middle, #profile-bottom, #career{
   width: 40%;
+}
+
+#career{
+  margin: 30px 0 0;
 }
