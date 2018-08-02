@@ -7,70 +7,163 @@
     <style>
       <%= File.open("pdf.css").read %>
     </style>
-    <h1 id="title">履歴書</h1>
+        
+    <div id="part-left">
+      <h1 id="title" class="d-inline-block">履歴書</h1>
+      <p id="date" class="d-inline-block">
+        <span class="mr-2"></span>年
+        <span class="mr-2"></span>月
+        <span class="mr-2"></span>日現在</p>
+      <div id="profile-image" class="d-inline-block"></div>
 
-    <table class="bt-bold bl-bold br-bold" id="profile-top">
-        <tr class="w-40">
-          <td class="br bb-dotted">ふりがな</th>
+      <table class="bt-bold bl-bold br-bold clear d-inline-block" id="profile-top">
+        <tr>
+          <td class="br bb-dotted">ふりがな
+            <span class="content-sm"></span>
+          </th>  
           <td>性別</th>
-        </tr>
+        </tr>    
       
         <tr>
-          <td class="br td-2 w-80">氏名</td>
+          <td class="br td-2 w-80">氏名
+            <span class="content-lg"></span>
+          </td>  
           <td class="td-2 ta-center w-20">男・女</td>
+        </tr>  
+      </table>  
+
+      <table class="bt-bold bl-bold br-bold bb" id="profile-middle">
+        <tr>
+          <td colspan="5" class="bt bb-dotted">ふりがな</td>
         </tr>
-    </table>
+        <tr>
+          <td colspan="4" class="bb td-3 va-top">現住所　〒
+            <span class="content-sm"></span><br>
+            <span class="content-lg"></span>
+          </td>
+        </tr>
 
-    <table class="bt-bold bl-bold br-bold bb" id="profile-middle">
-      <tr>
-        <td colspan="5" class="bt bb-dotted">ふりがな</td>
-      </tr>
-      <tr>
-        <td colspan="4" class="bb td-3 va-top">現住所　〒</td>
-      </tr>
+        <tr>
+          <td colspan="2" class="bb br td-2">TEL
+            <span class="content-lg"></span>
+          </td>
+          <td colspan="2" class="bb td-2">携帯電話
+            <span class="content-lg"></span>
+          </td>
+        </tr>
 
-      <tr>
-        <td colspan="2" class="bb br td-2">TEL</td>
-        <td colspan="2" class="bb td-2">携帯電話</td>
-      </tr>
+        <tr>
+          <td colspan="2" class="br td-2">FAX
+            <span class="content-lg"></span>
+          </td>
+          <td colspan="2" class="td-2">E-mail
+            <span class="content-lg"></span>
+          </td>
+        </tr>
+            
+      </table>
 
-      <tr>
-        <td colspan="2" class="br td-2">FAX</td>
-        <td colspan="2" class="td-2">E-mail</td>
-      </tr>
-          
-    </table>
+      <table class="bl-bold bb-bold br-bold" id="profile-bottom">
+        <tr>
+          <td colspan="2" class="bb-dotted br">ふりがな</td>
+          <td colspan="2" class="">TEL</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="br bb-bold td-3 va-top">連絡先 〒
+            <span class="content-sm"></span><br>
+            <span class="content-lg"></span>
+          </td>
+          <td colspan="1" class="bb br-bold td-3">
+            <span class="content-lg"></span>
+          </td>
+        </tr>
+      
+      </table>
 
-    <table class="bl-bold bb-bold br-bold" id="profile-bottom">
-      <tr>
-        <td colspan="2" class="bb-dotted br">ふりがな</td>
-        <td colspan="2" class="">TEL</td>
-      </tr>
-      <tr>
-        <td colspan="2" class="br bb-bold td-3 va-top">連絡先 〒</td>
-        <td colspan="1" class="bb br-bold td-3"></td>
-      </tr>
+
+      <table id="career-left" class="b-bold">
+        <tr class="bb-semibold">
+          <th class="ta-center br w-10">年</th>
+          <th class="ta-center br-semibold w-10">月</th>
+          <th class="ta-center br w-80">学歴・職歴など（項目別にまとめて記入）</th>
+        </tr>
+
+        <% 15.times do %>
+          <tr class="bb">
+            <td class="br td-2 w-10"></td>
+            <td class="br-semibold td-2 w-10"></td>
+            <td class="w-80"></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <div id="part-right">
+
+      <table id="career-right" class="b-bold">
+          <tr class="bb-semibold">
+            <th class="ta-center br w-10">年</th>
+            <th class="ta-center br-semibold w-10">月</th>
+            <th class="ta-center br w-80">学歴・職歴など（項目別にまとめて記入）</th>
+          </tr>
+
+          <% 6.times do %>
+            <tr class="bb">
+              <td class="br td-2 w-10"></td>
+              <td class="br-semibold td-2 w-10"></td>
+              <td class="w-80"></td>
+            </tr>
+          <% end %>
+        </table>
     
-    </table>
 
-
-    <table id="career" class="b-bold">
-      <tr class="bb-semibold">
-        <th class="ta-center br w-10">年</th>
-        <th class="ta-center br-semibold w-10">月</th>
-        <th class="ta-center br w-80">学歴・職歴など（項目別にまとめて記入）</th>
-      </tr>
-
-      <% 15.times do %>
-        <tr class="bb">
-          <td class="br td-2 w-10"></td>
-          <td class="br-semibold td-2 w-10"></td>
-          <td class="w-80"></td>
+      <table id="licences" class="b-bold">
+        <tr class="bb-semibold">
+          <th class="ta-center br w-10">年</th>
+          <th class="ta-center br-semibold w-10">月</th>
+          <th class="ta-center br w-80">免許・資格</th>
         </tr>
-      <% end %>
+  
+        <% 8.times do %>
+          <tr class="bb">
+            <td class="br td-2 w-10"></td>
+            <td class="br-semibold td-2 w-10"></td>
+            <td class="w-80"></td>
+          </tr>
+        <% end %>
+      </table>
 
-    </table>
-
+      <table id="application" class="b-bold">
+        <tr>
+          <td colspan="1" rowspan="3" class="va-top br-bold">志望の動機・特技・好きな学科・アピールポイントなど</td>
+          <td colspan="2" class="td-3 va-top bb-bold">通勤時間</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="td-3 va-top bb-bold">扶養家族数（配偶者を除く）<br>
+            <span class="content-lg d-inline-block"></span>  
+            <span class="content-sm va-bottom ta-right d-inline-block w-90 pt-1">人</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" class="td-3 va-top bb-bold br-bold">配偶者<br>
+            <span class="content-lg ta-center d-inline-block pt-1 w-100">有・無</span>
+          </td>
+          <td colspan="1" class="td-3 va-top bb-bold">配偶者の扶養義務<br>
+            <span class="content-lg ta-center d-inline-block pt-1 w-100">有・無</span>
+          </td>
+        </tr>
+      </table>
+      <table id="others" class="b-bold">
+        <tr>
+          <td class="bb">本人希望記入欄（給料・職種・勤務時間・勤務地・その他希望があれば記入）</td>
+        </tr>
+        <% 5.times do %>
+          <tr>
+            <td class="td-2 bb"></td>
+          </tr>  
+        <% end %>
+      </table>
+    </div>      
   </body>
 </html>
 

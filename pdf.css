@@ -15,6 +15,23 @@
 .w-90{ width: 90%; }
 .w-100{ width: 100%; }
 
+/* padding */
+
+.pt-1{ padding-top: 1em; }
+.pl-1{ padding-left: 1em; }
+.pb-1{ padding-bottom: 1em; }
+.pr-1{ padding-right: 1em; }
+
+.mt-1{ margin-top: 1em; }
+.ml-1{ margin-left: 1em; }
+.mb-1{ margin-bottom: 1em; }
+.mr-1{ margin-right: 1em; }
+
+.mt-2{ margin-top: 2em; }
+.ml-2{ margin-left: 2em; }
+.mb-2{ margin-bottom: 2em; }
+.mr-2{ margin-right: 2em; }
+
 
 /* td height */
 
@@ -32,10 +49,35 @@ td{
 
 .td-3{
   height: 90px;
-  padding-left: 5px;
-  font-size: 1.5em;
+  padding: 5px 10px auto auto;
+  font-size: 1.4em;
 }
 
+.d-block{
+  display: block;
+}
+
+.d-inline-block{
+  display: inline-block;
+}
+
+.clear{
+  clear: both;
+}
+
+.content-sm{
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  padding: auto 5px;  
+}
+
+.content-lg{
+  font-size: 1.1em;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 5px 5px;
+}
 
 /* border all */
 
@@ -129,26 +171,59 @@ td{
 
 /* align */
 
-.ta-center{
-  text-align: center;
+.ta-center{ text-align: center; }
+.ta-right{ text-align: right; }
+
+.va-top{ vertical-align: top; }
+.va-middle{ vertical-align: middle; }
+.va-bottom{ vertical-align: bottom; }
+
+/* others */
+
+#part-left, #part-right{
+  display: inline-block;
+  width: 50%;
 }
 
-.va-top{
-  vertical-align: top;
+#part-left{
+  float: left;
+}
+
+#part-right{
+  float: right;
+}
+
+#title, #date{
+  margin: 0;
 }
 
 #title{
+  font-size: 4em;
+}
+
+#date{
   font-size: 2em;
+  padding: 0 0 0 100px;
+}
+
+#profile-image{
+  width: 180px;
+  height: 240px;
+  border: 1px dotted #000;
+  float: right;
+  margin: 0 10% 0 0;
 }
 
 #profile-top{
-  width: 30%;
+  width: 60%;
+  margin: 130px 0 0;
 }
 
-#profile-middle, #profile-bottom, #career{
-  width: 40%;
+#profile-middle, #profile-bottom, #career-left,
+#career-right, #licences, #application, #others{
+  width: 90%;
 }
 
-#career{
+#career-left, #licences, #application, #others{
   margin: 30px 0 0;
 }
