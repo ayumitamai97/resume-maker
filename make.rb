@@ -15,7 +15,7 @@ PDFKit.configure do |config|
   }
 end
 
-erb_file = File.open("pdf.html.erb").read
+erb_file = File.open("resume_template.html.erb").read
 rendered_html = ERB.new(erb_file).result
 
 file = open("resume_template.pdf","w")

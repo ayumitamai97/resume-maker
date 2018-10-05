@@ -197,6 +197,10 @@ td{
   padding: 0 0 0 200px;
 }
 
+#date *{
+  font-size: 1em;
+}
+
 #profile-image{
   width: 360px;
   height: 480px;
@@ -206,7 +210,7 @@ td{
 }
 
 #profile-top{
-  width: 60%;
+  width: 1300px;
   margin: 260px 0 0;
 }
 
