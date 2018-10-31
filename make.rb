@@ -21,5 +21,3 @@ rendered_html = ERB.new(erb_file).result
 file = open("resume_template.pdf","w")
 file.puts PDFKit.new(rendered_html).to_pdf
 file.close
-
-

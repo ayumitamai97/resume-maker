@@ -1,3 +1,4 @@
+<% require "wareki"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,9 +12,10 @@
     <div id="part-left">
       <h1 id="title" class="d-inline-block">履歴書</h1>
       <p id="date" class="d-inline-block">
-        <span class="mr-2"></span>年
-        <span class="mr-2"></span>月
-        <span class="mr-2"></span>日現在</p>
+        <% wareki_today = Wareki::Date.today %>
+        <span class="mr-2"><%= wareki_today.era_name + wareki_today.era_year.to_s %>年</span>
+        <span class=""><%= wareki_today.month %>月</span>
+        <span class=""><%= wareki_today.day %>日現在</span></p>
       <div id="profile-image" class="d-inline-block"></div>
 
       <table class="bt-bold bl-bold br-bold clear d-inline-block" id="profile-top">
