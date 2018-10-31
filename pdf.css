@@ -210,8 +210,9 @@ td{
 }
 
 #profile-top{
+  float: left;
   width: 1300px;
-  margin: 260px 0 0;
+  margin: 0;
 }
 
 #profile-middle, #profile-bottom, #career-left,
