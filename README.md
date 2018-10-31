@@ -1,6 +1,6 @@
-# PDFを生成して開いてみる
+# ファイル生成元となる*.erbファイルを指定してPDFを生成する
 ```
-$ ruby make.rb; open resume_template.pdf
+$ ruby make.rb -f resume_template.html.erb
 ```
 
 # HTMLで編集する
