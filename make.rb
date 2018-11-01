@@ -21,7 +21,8 @@ erb_file_name = opt.on('-f').default_argv[-1]
 
 erb_file = File.open(erb_file_name).read
 rendered_html = ERB.new(erb_file).result
+today = Date.today.to_s.gsub("-", "")
 
-file = open("resume_template.pdf","w")
+file = open("resume_#{today}.pdf","w")
 file.puts PDFKit.new(rendered_html).to_pdf
 file.close
